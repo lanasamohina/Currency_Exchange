@@ -42,10 +42,12 @@ export default {
     @include exSmall{
       order: 1;
       margin-top: 20px;
+      font-size: 13px;
     }
   }
   .cards{
     display: flex;
+    justify-content: space-between;
   }
 
   .mastercard{
@@ -55,10 +57,16 @@ export default {
     @include responsive(1120px){
       width: 50%;
     }
+    @include responsive(500px){
+      width: 20%;
+    }
   }
   .mastercard{
     @include responsive(1120px){
       width: 65%;
+    }
+    @include responsive(500px){
+      width: 60%;
     }
   }
 </style>

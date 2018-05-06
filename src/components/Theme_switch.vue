@@ -141,7 +141,10 @@ export default {
     }
     .fa-angle-down{
       transform: rotate(180deg);
-      right: -15px;
+      right: -30px;
+      @include responsive(500px){
+        right: -15px;
+      }
     }
     .theme_switch-wrapper{
       color: #fe7c1a;

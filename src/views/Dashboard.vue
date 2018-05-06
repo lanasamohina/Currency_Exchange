@@ -249,7 +249,7 @@ export default {
     }
     @include responsive(800px){
       top: 55px;
-      left: 55px;
+      left: 40px;
     }
     @include responsive(500px){
       top: -30px;
