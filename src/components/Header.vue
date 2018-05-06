@@ -45,8 +45,8 @@ export default {
   margin-top: 40px;
 }
   .logo__link{
-    @include exSmall{
-      width: 90px;
+    @include responsive(500px){
+      width: 70px;
     }
   }
   .logo{
@@ -56,7 +56,7 @@ export default {
     @include responsive(1250px){
       order: 1;
     }
-    @include exSmall{
+    @include responsive(500px){
       width: 100%;
     }
   }

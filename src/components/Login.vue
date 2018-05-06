@@ -42,9 +42,9 @@ export default {
     @include responsive(1250px){
       order: 3;
     }
-    @include responsive(450px){
-      padding: 8px 15px;
-      font-size: 14px;
+    @include responsive(500px){
+      padding: 5px 5px;
+      font-size: 12px;
     }
   }
   .login:hover{

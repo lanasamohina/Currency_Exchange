@@ -36,11 +36,11 @@
           <label class="exchange-label exchange-label--get" for="input-get">I get</label>
           <input type="text" class="exchange-input__get" id="input-get" v-model="getValue" :change="convertCurrency()">
           <i v-html="getCurrency.iconContent" :class="getCurrency.iconClass"></i>
-        </div>
 
-        <!--get list-->
-        <app-modal_from @change-currency="setGetCurrency" modal-class="get-modal" type="get" v-show="isModalGetVisible" @close="closeModal"/>
-      </div>
+          <!--get list-->
+          <app-modal_from @change-currency="setGetCurrency" modal-class="get-modal" type="get" v-show="isModalGetVisible" @close="closeModal"/>
+        </div>
+       </div>
 
     </div>
   </div>
@@ -148,20 +148,18 @@ export default {
       font-size: 45px;
     }
     @include responsive(800px){
-      font-size: 45px;
       width: 50px;
       left: 240px;
     }
     @include responsive(500px){
-      left: 215px;
-    }
-    @include responsive(420px){
-      left: 175px;
+      top: 91px;
+      font-size: 30px;
+      height: 30px;
+      width: 32px;
+      left: 110px;
     }
   }
-  .theme-light .dashboard__title{
 
-  }
   .dashboard__title{
     font-size: 63px;
     letter-spacing: -1px;
@@ -186,7 +184,7 @@ export default {
       font-size: 28px;
     }
     @include responsive(450px){
-      font-size: 25px;
+      font-size: 24px;
     }
   }
   .dashboard__list{
@@ -203,12 +201,10 @@ export default {
     @include small{
       margin: 5px 0 0 78px;
     }
-
     @include responsive(450px){
       margin: 5px 0 0 0;
     }
   }
-
   .dashboard__item{
     color: #fe7c1a;
   }
@@ -219,6 +215,9 @@ export default {
     color: rgb(132,138,153);
     @include responsive(1200px){
       font-size: 17px;
+    }
+    @include responsive(500px){
+      font-size: 15px;
     }
   }
   .exchange{
@@ -252,16 +251,17 @@ export default {
       top: 55px;
       left: 55px;
     }
-    @include responsive(550px){
-      top: 0;
+    @include responsive(500px){
+      top: -30px;
+      left: 0;
     }
   }
   .exchange-label--get{
     @include small{
       top: 195px;
     }
-    @include responsive(550px){
-      top: 140px;
+    @include responsive(500px){
+      top: -25px;
     }
   }
   .exchange-input__give, .exchange-input__get{
@@ -274,6 +274,13 @@ export default {
     color: rgb(48,48,48);
     @include responsive(1120px){
       width: 170px;
+    }
+    @include responsive(1120px){
+       width: 170px;
+     }
+    @include responsive(500px){
+      width: 135px;
+      font-size: 19px;
     }
   }
 
@@ -291,11 +298,17 @@ export default {
   .give-get__wrapper>.fas, .fa-hryvnia-sign{
     font-size: 24px;
     color: rgb(132,138,153);
+    @include responsive(500px){
+      font-size: 16px;
+    }
   }
   .fa-hryvnia-sign{
     font-size: 27px;
     color: rgb(132,138,153);
     font-weight: bold;
+    @include responsive(500px){
+      font-size: 20px;
+    }
   }
   .give-get__wrapper{
     width: 470px;
@@ -313,6 +326,10 @@ export default {
     @include small{
       margin: 30px auto;
     }
+    @include responsive(500px){
+      width: 260px;
+      position: relative;
+    }
   }
   .give-get__select{
     display: flex;
@@ -324,6 +341,15 @@ export default {
     transform: rotate(90deg);
     color: rgb(132,138,153);
     font-size: 23px;
+    @include responsive(500px){
+      font-size: 18px;
+      margin-left: 3px;
+    }
+  }
+  .give__descr{
+    @include responsive(500px){
+      font-size: 12px;
+    }
   }
 
 </style>

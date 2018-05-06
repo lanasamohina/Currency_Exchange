@@ -30,5 +30,5 @@ export default new Router({
     {path: '/ami', component: AMI},
     {path: '/kyc', component: KYC}
   ],
-  base: process.env.environment === 'development' ? '/' : '/Currency_Exchange/'
+  base: process.env['NODE_ENV'] === 'development' ? '/' : '/Currency_Exchange/'
 })

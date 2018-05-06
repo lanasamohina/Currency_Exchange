@@ -76,6 +76,11 @@ export default {
     position: absolute;
     right: -20px;
     bottom: 0;
+    @include responsive(500px){
+      font-size: 17px;
+      right: -15px;
+      padding-left: 0px;
+    }
   }
   .theme_switch-wrapper{
     position: relative;
@@ -87,13 +92,17 @@ export default {
     cursor: pointer;
     position: relative;
     transition: color .3s ease-in-out;
-    @include z-indexPopupContent;
+    @include z-indexContentMiddle;
     @include responsive(1480px){
       margin-right: 25px;
     }
     @include responsive(1250px){
       order: 2;
       margin-top: 0;
+    }
+    @include responsive(500px){
+      width: 79px;
+      line-height: 17px;
     }
   }
   .theme_switch-wrapper:hover, .theme_switch__item:hover{
@@ -102,8 +111,8 @@ export default {
   }
 
   .theme_switch_text{
-    @include exSmall{
-      font-size: 14px;
+    @include responsive(500px){
+      font-size: 11px;
     }
   }
 
@@ -119,6 +128,7 @@ export default {
     border-radius: 5px;
     top: 30px;
     font-size: 14px;
+    @include z-indexPopupContent;
   }
 
   .theme_switch__item{
@@ -131,7 +141,7 @@ export default {
     }
     .fa-angle-down{
       transform: rotate(180deg);
-      right: -30px;
+      right: -15px;
     }
     .theme_switch-wrapper{
       color: #fe7c1a;

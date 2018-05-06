@@ -78,12 +78,14 @@ export default {
     position: absolute;
     display: block;
     @include z-indexPopupContent;
-
     @include responsive(1200px){
       width: 460px;
     }
     @include responsive(1120px){
       width: 355px;
+    }
+    @include responsive(500px){
+      width: 275px;
     }
   }
   .give__list{
@@ -103,8 +105,9 @@ export default {
     @include responsive(520px){
       left: 53px;
     }
-    @include responsive(450px){
-      left: 30px;
+    @include responsive(500px){
+      left: 0;
+      bottom: -145px;
     }
   }
   .give__item{
@@ -133,7 +136,10 @@ export default {
   }
   .fas, .fa-hryvnia-sign{
     font-size: 24px;
-    color: rgb(132,138,153)
+    color: rgb(132,138,153);
+    @include responsive(500px){
+      font-size: 19px;
+    }
   }
   .fa-hryvnia-sign{
     font-weight: bold;
@@ -172,10 +178,12 @@ export default {
       left: 100px;
     }
     @include responsive(520px){
-      left: 53px;
+      left: 0;
     }
-    @include responsive(450px){
-      left: 30px;
+    @include responsive(500px){
+      width: 275px;
+      left: 0;
+      bottom: 0;
     }
   }
   .fa-exchange-alt{
@@ -186,6 +194,9 @@ export default {
   }
   .give__descr{
     color: rgb(13,20,44);
+    @include responsive(500px){
+      font-size: 12px;
+    }
   }
 
 </style>

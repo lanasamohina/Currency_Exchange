@@ -53,6 +53,10 @@ export default {
   html, body, #app {
     width: 100%;
     height: 100vh;
+    @include responsive(500px){
+      height: auto;
+      min-height: 100vh;
+    }
     font-family: 'GothamProLight', sans-serif;
   }
   body{

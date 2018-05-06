@@ -67,6 +67,10 @@ export default {
     @include responsive(1250px){
       order: 4;
     }
+    @include responsive(500px){
+      width: 30px;
+      height: 32px;
+    }
   }
   .nav_wrapper{
     margin: 0 360px 0 65px;
@@ -89,7 +93,6 @@ export default {
       background: #fe7c1a;
     }
   }
-
   .nav_wrapper--active{
     .menu_fade{
       display: block;
@@ -107,7 +110,7 @@ export default {
     margin: 0;
     padding: 0;
     list-style: none;
-    @include z-indexPopupContent;
+    @include z-indexPopupOverlay;
     position: relative;
     @include responsive(1250px){
       flex-flow: column nowrap;
@@ -137,7 +140,6 @@ export default {
       color: #fff;
     }
   }
-
   .nav__link {
     text-decoration: none;
     font-size: 16px;
@@ -166,14 +168,20 @@ export default {
     height: 40px;
     align-items: center;
     display: none;
-
     @include responsive(1250px){
       display: flex;
       order: 4;
+    }
+    @include responsive(500px){
+      width: 30px;
+      height: 32px;
     }
   }
   .fa-bars{
     color: #fe7c1a;
     font-size: 30px;
+    @include responsive(500px){
+      font-size: 22px;
+    }
   }
 </style>
