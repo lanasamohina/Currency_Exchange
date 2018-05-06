@@ -1,0 +1,54 @@
+
+@mixin large{
+  @media screen and (max-width: 1850px){
+  @content;
+  }
+}
+
+@mixin medium{
+  @media screen and (max-width: 1540px){
+    @content;
+  }
+}
+@mixin small{
+  @media screen and (max-width: 900px){
+    @content;
+  }
+}
+@mixin exSmall{
+  @media screen and (max-width: 530px){
+    @content;
+  }
+}
+@mixin fullScreen{
+  @media screen and (min-width: 1250px){
+    @content;
+  }
+}
+@mixin responsive($width){
+  @media screen and (max-width: $width){
+    @content;
+  }
+}
+
+@mixin z-indexBackground{
+  z-index: 0;
+}
+@mixin z-indexContentBottom{
+  z-index: 9;
+}
+@mixin z-indexContentMiddle{
+  z-index: 10;
+}
+@mixin z-indexContentTop{
+  z-index: 11;
+}
+@mixin z-indexPopupFade{
+  z-index: 99;
+}
+@mixin z-indexPopupContent{
+  z-index: 100;
+}
+@mixin z-indexPopupOverlay{
+  z-index: 101;
+}
