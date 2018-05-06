@@ -5,6 +5,7 @@
       <ul class="dashboard__list">
         <li class="dashboard__item"><span class="dashboard_text">Quality of service is our advantage!</span></li>
         <li class="dashboard__item"><span class="dashboard_text">Working 24 hours a day. 24/7</span></li>
+        <li class="dashboard__item"><span class="dashboard_text">Latest update: {{courses.date}}</span></li>
       </ul>
 
       <div class="exchange">
@@ -47,8 +48,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import ModalFrom from '../components/Modal_from.vue'
+import courceApi from '../api/index.js'
 export default {
   name: 'dashboard',
   components: {
@@ -90,10 +91,7 @@ export default {
       this.convertCurrency()
     },
     fetchCourses () {
-      axios.get('./static/courses.json').then(response => {
-        this.courses = response.data
-        this.convertCurrency()
-      })
+      courceApi.getCourses(this)
     },
     convertCurrency () {
       if (typeof (this.courses.rates) === 'undefined') {
